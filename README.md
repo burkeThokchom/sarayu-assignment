@@ -1,4 +1,10 @@
-After npm install, run the server and 
+* After npm install, run the server and 
+* Please use postman for accessing the api,
+* In autorization use Bearer Token, for accessing protected routes
+* In the request url, put: localhost:4000/graphql, (Since it is a graphql api, only one route is defined)
+* USE POST method for all queries(getting data, adding data,  updating data, etc.).
+
+
 Please go to http://localhost:4000/graphql in the postman
 
 These are the APIs
