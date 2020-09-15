@@ -17,8 +17,8 @@ const UserType = new GraphQLObjectType({
 		events: {
 			type: new GraphQLList(require('./EventType')),
 			resolve: async function(user){
-				const userWithEvents = await Users.find({isDeleted: false}).populate({path: "events", match: {isDeleted: false}});
-				return userWithEvents.events
+				const userWithEvents = await Users.findOne({_id: user._id, isDeleted: false}).populate({path: "events", match: {isDeleted: false}});
+				return userWithEvents.events;
 			}
 		}
 	})

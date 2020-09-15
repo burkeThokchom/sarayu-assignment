@@ -19,12 +19,10 @@ const userSchema = new Schema({
 		maxlength: 100,
 		required: true
 	},
-	events: [
-		{
-			type: [Schema.Types.ObjectId],
+	events: [{
+			type: mongoose.Schema.Types.ObjectId,
 			ref: "Events"
-		}
-	],
+	}],
 	isDeleted: {
 		type: Boolean,
 		default: false
